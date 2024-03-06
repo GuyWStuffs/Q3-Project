@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private float speed = 2.0f;
+    private float speed = 5.0f;
     public GameObject character;
 
     void Update()
@@ -20,11 +20,11 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.position += Vector3.forward * speed * Time.deltaTime;
+            transform.position += Vector3.up * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position += Vector3.back * speed * Time.deltaTime;
+            transform.position += Vector3.down * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -38,12 +38,12 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += Vector3.back * speed * Time.deltaTime;
+            transform.position += Vector3.down * speed * Time.deltaTime;
 
         }
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += Vector3.forward * speed * Time.deltaTime;
+            transform.position += Vector3.up * speed * Time.deltaTime;
         }
     }
 }
